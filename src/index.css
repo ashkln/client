@@ -1,13 +1,200 @@
-body {
+/* fonts import */
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans|Open+Sans|Roboto&display=swap");
+
+/* ========reset========= */
+body,
+html {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* lists */
+ul,
+ol,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* links */
+a {
+  text-decoration: none;
+  color: none;
+}
+
+/* ========reset========= */
+
+/* =======navbar====== */
+
+/* main navbar container */
+.navbar {
+  padding-top: 20px;
+  padding-left: 20px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* navbar-links (the ul with class navbar-links container) */
+.navbar-links {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: flex-end;
+}
+
+/* navabar-title (flex to take 50% of width) */
+.navbar-title {
+  min-width: 200px;
+  flex-basis: 50%;
+}
+
+/* link li's */
+.navbar-link-item {
+  margin-right: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* each <a> in the li */
+.nav-link {
+  color: #000;
+  transition: all 200ms;
+  display: block;
+}
+
+/* a hover effect */
+.nav-link:hover {
+  color: #1e88e5;
+}
+
+/* collapsible toggle bars for mobile view */
+/* collapsible container */
+.navbar-collapsible-bars div {
+  margin-right: 1rem;
+  margin-bottom: 2px;
+  background-color: #000;
+  height: 2px;
+  display: block;
+  display: none;
+  cursor: pointer;
+}
+/* bar 1 */
+.collapsible-bar-1 {
+  width: 20px;
+}
+/* bar 2 */
+.collapsible-bar-2 {
+  width: 15px;
+}
+/* bar 3 */
+.collapsible-bar-3 {
+  width: 20px;
+}
+/* =================== */
+
+/* overlay and collapsible classes */
+.navbar-overlay {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  top: 0;
+  left: 0;
+  transition: all 500ms;
+}
+
+.collapsible-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.collapsible-link-item {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.collapsible-link {
+  color: #fff;
+  transition: 200ms;
+}
+.collapsible-link:hover {
+  font-weight: bold;
+}
+
+.collapsible-close {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  display: block;
+  cursor: pointer;
+}
+/* ===== overlay and collapsible classes end ====== */
+
+/* ========= classes for monitor , home and other components ======= */
+.chart-container{
+  width:80%;
+  height: 50%;
+  margin:2rem;
+}
+
+.flex-container{
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ====== media query classes for responsive behaviour ===== */
+@media only screen and (max-width: 850px) {
+  /* hide the links */
+  .navbar-links li {
+    display: none;
+  }
+
+  /* make the toggle appear instead */
+  .navbar-collapsible-bars div {
+    display: block;
+  }
+
+  /* adjust chart size */
+  .chart-container{
+    width:100%;
+    height: 100%;
+    margin:2rem;
+  }
+
+}
+
+@media only screen and (max-width:400px){
+
+  .chart-container{
+    width:100%;
+    height: 150%;
+    margin:2rem;
+  }
+
 }
