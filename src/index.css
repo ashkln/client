@@ -91,6 +91,11 @@ a {
   display: none;
   cursor: pointer;
 }
+
+.navbar-collapsible-bars {
+  margin-right:1rem;
+}
+
 /* bar 1 */
 .collapsible-bar-1 {
   width: 20px;
@@ -167,6 +172,101 @@ a {
   align-items: center;
 }
 
+.center-container{
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header{
+  margin-top:5rem;
+  font-size:1.5rem;
+  font-family: 'Nunito Sans',sans-serif;
+  font-weight:bold;
+  margin-left:10vw;
+  margin-right:10vw;
+}
+
+.description{
+  margin-top:2rem;
+  margin-bottom:2rem;
+  margin-left:10vw;
+  margin-right:10vw;
+  min-width:250px;
+  line-height: 2rem;
+  font-family: 'Open Sans',sans-serif;
+  font-size:1rem;
+  font-weight:400;
+}
+
+.start-monitor{
+  padding:1.1rem;
+  font-size:1.2rem;
+  font-family: 'Nunito Sans',sans-serif;
+  font-weight: bold;
+  background-color:#fff;
+  border:3px solid #000;
+  border-radius:12px;
+  transition:400ms;
+  display: block;
+  margin-bottom:5rem;
+}
+
+.start-monitor:hover{
+  padding:1.1rem;
+  font-size:1.2rem;
+  font-family: 'Nunito Sans',sans-serif;
+  font-weight: bold;
+  background-color:#000;
+  color:#fff;
+  display: block;
+  margin-bottom:5rem;
+}
+
+.start-monitor:active{
+  background-color:#000;
+  color:#fff;
+  border:none;
+  display:block;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+}
+
+.about-container{
+  max-width:950px;
+  min-width: 250px;
+  margin:auto;
+  margin-top:3rem;
+  margin-left:17%;
+  margin-right:17%;
+}
+
+.app-question {
+  margin-top:3.5rem;
+  margin-bottom:3.5rem;
+  border-bottom:1px solid #c2c2c2;
+}
+
+.question {
+  font-family: 'Nunito Sans',sans-serif;
+  font-size:1.5rem;
+  font-weight: bold;
+}
+
+.answer {
+  font-family: 'Roboto',sans-serif;
+  line-height: 2rem;
+  margin-bottom:1rem;
+}
+
+.spacer{
+  padding:2rem;
+}
+
+
 
 /* ====== media query classes for responsive behaviour ===== */
 @media only screen and (max-width: 850px) {
@@ -189,12 +289,21 @@ a {
 
 }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:500px){
 
   .chart-container{
     width:100%;
     height: 150%;
     margin:2rem;
+  }
+
+  .header {
+    font-size:1.2rem;
+  }
+
+  .about-container{
+    margin-left:10%;
+    margin-right:10%;
   }
 
 }
