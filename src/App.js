@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { HashRouter , Route } from 'react-router-dom';
+import { BrowserRouter as Router , Route } from 'react-router-dom';
 import Home from './Home';
 import Monitor from './Monitor';
 import Navbar from './Navbar'
@@ -9,12 +9,12 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <HashRouter basename="/">
+        <Router>
         <Navbar></Navbar>
           <Route path="/" exact component={Home}/>
           <Route path="/monitor" component={Monitor}/>
           <Route path="/about" component={About}/>
-        </HashRouter>
+        </Router>
       </div>
     )
   }
